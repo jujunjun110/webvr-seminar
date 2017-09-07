@@ -1,0 +1,41 @@
+{
+    "name": "webvr-seminor",
+    "version": "1.0.0",
+    "description": "webvr-seminor",
+    "main": "index.js",
+    "scripts": {
+        "start": "npm run dev",
+        "build": "browserify src/require.js -t babelify -o dev/build.js && browserify src/app.js -t babelify -o dev/app.js",
+        "dev": "budo src/app.js --live --open --dir dev -- -t babelify -o dev/app.js"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/jujunjun110/aframe-application-boilerplate.git"
+    },
+    "keywords": [
+        "aframe",
+        "aframe-component",
+        "aframe-vr",
+        "vr",
+        "webvr"
+    ],
+    "author": "jujunjun110 <https://twitter.com/jujunjun110>",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/jujunjun110/aframe-application-boilerplate/issues"
+    },
+    "homepage": "https://github.com/jujunjun110/aframe-application-boilerplate#readme",
+    "devDependencies": {
+        "babel-eslint": "^7.1.1",
+        "babel-preset-es2015": "^6.22.0",
+        "babelify": "^7.3.0",
+        "browserify": "^14.0.0",
+        "budo": "^10.0.4",
+        "envify": "^4.0.0",
+        "eslint": "^4.6.1",
+        "inquirer": "^3.0.1",
+    },
+    "dependencies": {
+        "aframe": "^0.6.0"
+    }
+}
