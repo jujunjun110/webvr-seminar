@@ -1,18 +1,24 @@
+/* A-Frameライブラリの読み込みを確認する処理。変更不要。 */
 if (typeof AFRAME === 'undefined') {
     throw new Error('Component attempted to register before AFRAME was available.')
 }
 
-/* here you write your components. */
+/* 以下自作コンポーネントの定義 */
 AFRAME.registerComponent('my-component', {
     schema: {},
     multiple: false,
-    init: function () {
-        ['hello', 'component'].map((v) => console.log(v))
+    init: function() {
+        /* コンポーネントの初期化時に一度だけ呼ばれる関数 */
+        /* ここに移動などの処理を書いてみよう */
     },
-    update: function (oldData) {},
-    remove: function () {},
-    // tick: function (t) { },
-    pause: function () {},
-    play: function () {}
-})
 
+    // コンポーネントのプロパティが変更された時に呼び出される関数
+    // update: function() {
+    // 
+    // },
+
+    // 毎フレームごとに呼び出される関数
+    // tick: function() { 
+    // 
+    // },
+})
