@@ -2,7 +2,7 @@
 
 ## プロジェクトのインストール
 
-1. `git clone`
+1. `git clone git@github.com:jujunjun110/webvr-seminar.git`
 2. `npm install`
 
 ## プロジェクトのビルド
