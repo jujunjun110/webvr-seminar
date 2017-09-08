@@ -11,6 +11,7 @@
 2. `npm run dev` ... nodeサーバーを開きアプリケーションを実行します。`src/app.js` への変更はリアルタイムにブラウザ側に反映されます。
 
 ## ファイル構成
+![dir](https://user-images.githubusercontent.com/4201520/30205376-915178d6-94c3-11e7-96fe-009e22d9d434.png)
 
 - src以下 ... 自分でjavascriptを編集するところ。
 	- src/require.js ... 必要な外部モジュールを書くところ。dev/build.jsにビルドされます。
@@ -40,6 +41,8 @@
 `git clone git@github.com:jujunjun110/aframe-pong.git`
 
 ### 第一部 今日触るもろもろについての解説(10分くらい)
+
+![image](https://user-images.githubusercontent.com/4201520/30205477-d75270f6-94c3-11e7-9390-e380f190ff72.png)
 
 1. VRについて
 	- VRとは
