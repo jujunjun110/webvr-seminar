@@ -1,14 +1,14 @@
-# WebVR Seminor
+# WebVR セミナー資料
 
 ## プロジェクトのインストール
 
-1. git clone
-2. npm install
+1. `git clone`
+2. `npm install`
 
 ## プロジェクトのビルド
 
-1. npm run build ... アプリケーションをビルドします。
-2. npm run dev ... nodeサーバーを開きアプリケーションを実行します。`src/app.js` への変更はリアルタイムにブラウザ側に反映されます。
+1. `npm run build` ... アプリケーションをビルドします。
+2. `npm run dev` ... nodeサーバーを開きアプリケーションを実行します。`src/app.js` への変更はリアルタイムにブラウザ側に反映されます。
 
 ## ファイル構成
 
@@ -17,7 +17,7 @@
 	- src/app.js ... メイン処理を書くところ。dev/app.jsにビルドされます。ES6でOK。
 	- src/component.js ... コンポーネントを書くところ。書いたら名前を変えてapp.js内でrequireする。ES6でOK。
 
-- dev以下 ... アプリケーションの実行に本当に必要なファイルだけがあるところ。（開発用）
+- dev以下 ... アプリケーションの実行に必要なファイルがビルドされるところ。
 	- dev/index.html ... メインのHTMLファイル。ここは直接編集します。
 	- dev/app.js ... ブラウザで実行可能な1ファイルにビルドされた自作スクリプト群。**自分では編集しません**。
 	- dev/build.js ... ブラウザで実行可能な1ファイルにビルドされた外部スクリプト群。**自分では編集しません**。
@@ -27,30 +27,37 @@
 アプリケーションでnpmモジュールを利用したいときは `npm install -S {packagename}`としてインストールしたのち、
 `src/require.js` に `require("{packagename}")` の一行を追加しましょう
 
-## プログラム内容
+## 今日の流れ
 
-### 第一部 今日触るもろもろについての解説
+**[重要]**
 
-- VRについて
+※ 話を聞きながら、ファイルのダウンロードを進めて下さい！
+
+↓ 適当なディレクトリ（例えば ~/Documents/ など）で 
+
+`git clone git@github.com:jujunjun110/webvr-seminar.git`
+
+`git clone git@github.com:jujunjun110/aframe-pong.git`
+
+### 第一部 今日触るもろもろについての解説(10分くらい)
+
+1. VRについて
 	- VRとは
 	- Web VRとは
 	- A-Frameとは
+		- Three.js
 
-- JavaScriptの開発環境について
+
+2. 今回使うJavaScriptの開発環境について
 	- ES6 (ECMAScript)
 	- npm
 	- browserify, babel
-	- src以下（編集エリア）
-		- ES6のモダンな文法が使える
-		- モジュール管理（別ファイルのrequire, import）ができて見通しやすい
-	- dev以下（実行用エリア）
-		- browserify によって2ファイルにまとまっているので転送速度的に有利
-		- babel によって、古いブラウザへの対応が可能
 
 ### 第二部 A-Frame を触ってみる
 
 1. プロジェクトを実行しよう
-	- git clone
+	- git clone git@github.com:jujunjun110/webvr-seminar.git
+	- cd webvr_seminar
 	- npm install
 	- npm run build
 	- npm run dev
@@ -77,29 +84,23 @@
 1. コンポーネントを組み合わせて複雑なことを実現しよう
 	- オブジェクトに視線が当たったら色が変わるようにしてみよう
 		- ヒント: raycaster コンポーネントを利用する
+		- ヒント: イベントリスナーを利用する
 	- 視線が外れたら元の色に戻るようにしてみよう
 
 
+### 第三部 VRゲームを作る
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+1. 雛形プロジェクトのインストールとビルド
+	- git clone git@github.com:jujunjun110/aframe-pong.git
+	- cd aframe-pong
+	- git checkout webvr_seminar
+	- npm install
+	- npm run build
+	- npm run dev
+2. プレイヤーを動かせるようにしてみる
+	- src/player-mover.js を編集し、プレイヤーが視線に沿って動くようにする
+	- ヒントはソースコード上
+3. ボールを動くようにしてみる
+	- src/ball.js を編集し、ボールがゲーム開始時に動き出すようにする
+	- ヒントはソースコード上
+	- 完成！！	
